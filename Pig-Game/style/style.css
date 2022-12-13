@@ -1,0 +1,208 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*nunito font*/
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: grid;
+  place-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.flex {
+  display: flex;
+}
+
+.btns {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btns .dice-photo {
+  width: 7rem;
+  position: absolute;
+  top: 180px;
+}
+.btns .btn {
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btns .btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btns .second-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 10rem;
+}
+.btns .second-col .hold {
+  width: 160px !important;
+  margin: auto;
+}
+
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player-active .second-col {
+  opacity: 1 !important;
+}
+
+.player1 {
+  border-radius: 9px 0 0 9px;
+}
+
+.player2 {
+  border-radius: 0 9px 9px 0;
+}
+
+.wrapper {
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  -webkit-backdrop-filter: blur(300px);
+          backdrop-filter: blur(300px);
+  filter: blur();
+  position: relative;
+}
+
+.player {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s;
+}
+.player h3 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.player .score {
+  font-size: 5rem;
+  font-weight: 400;
+  color: #c7365f;
+}
+.player .first-col {
+  margin-top: 4.5rem;
+}
+.player .second-col {
+  margin-bottom: 4.5rem;
+  background-color: #c7365f;
+  padding: 1.2em 4em 0.3em 4em;
+  color: white;
+  border-radius: 9px;
+  opacity: 0.8;
+}
+.player .second-col h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.player .second-col .current-score {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 0.3em;
+}
+
+.player.win {
+  background-color: #2f2f2f;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    width: 800px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

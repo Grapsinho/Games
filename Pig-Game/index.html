@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="wrapper flex">
+      <div class="player1 player-active player">
+        <div class="first-col">
+          <h3>PLAYER 1</h3>
+          <h3 class="score score-1">0</h3>
+        </div>
+
+        <div class="second-col">
+          <div class="current-div">
+            <h4>CURRENT</h4>
+
+            <h4 class="current-score current-score-1">0</h4>
+          </div>
+        </div>
+      </div>
+      <div class="player2 player player-dactive">
+        <div class="first-col">
+          <h3>PLAYER 2</h3>
+          <h3 class="score score-2">0</h3>
+        </div>
+
+        <div class="second-col">
+          <div class="current-div">
+            <h4>CURRENT</h4>
+
+            <h4 class="current-score current-score-2">0</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <button class="new-game btn">🔄 NEW GAME</button>
+
+        <img src="" alt="" class="dice-photo" />
+
+        <div class="second-col">
+          <button class="roll-dice btn">🎲 ROLL DICE</button>
+          <button class="hold btn">📥 HOLD</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

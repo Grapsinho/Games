@@ -1,0 +1,226 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*nunito font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+$font: 'Nunito',
+sans-serif;
+$scr-clr: #c7365f;
+$active-player: rgba(255, 255, 255, 0.4);
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 62.5%;
+
+    font-family: $font;
+    color: #333;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+
+    display: grid;
+    place-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.btns {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .dice-photo {
+        width: 7rem;
+        position: absolute;
+        top: 180px;
+    }
+
+    .btn {
+        color: #444;
+        background: none;
+        border: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 400;
+        transition: all 0.2s;
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        padding: 0.7rem 2.5rem;
+        border-radius: 50rem;
+        box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+    }
+
+    .btn:active {
+        transform: translateY(3px);
+        box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
+    }
+
+    .second-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 10rem;
+
+        .hold {
+            width: 160px !important;
+            margin: auto;
+        }
+    }
+}
+
+.player-active {
+    background-color: $active-player;
+
+    .second-col {
+        opacity: 1 !important;
+    }
+}
+
+.player1 {
+    border-radius: 9px 0 0 9px;
+}
+
+.player2 {
+    border-radius: 0 9px 9px 0;
+}
+
+.wrapper {
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 3rem 5rem rgb(0 0 0 / 25%);
+    border-radius: 9px;
+    backdrop-filter: blur(300px);
+    filter: blur();
+    position: relative;
+}
+
+.player {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+
+    h3 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .score {
+        font-size: 5rem;
+        font-weight: 400;
+        color: $scr-clr;
+    }
+
+    .first-col {
+        margin-top: 4.5rem;
+    }
+
+    .second-col {
+        margin-bottom: 4.5rem;
+        background-color: $scr-clr;
+        padding: 1.2em 4em .3em 4em;
+        color: white;
+        border-radius: 9px;
+        opacity: .8;
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .current-score {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-top: .3em;
+        }
+    }
+}
+
+.player.win {
+    background-color: #2f2f2f;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        width: 800px !important;
+    }
+}
