@@ -36,7 +36,7 @@
 * Javascript ამით თამაშს შევმატე ფუნქციონალი
 
 ## როგორ მოხვდე საიტზე?
-დააწკაპე: [Quiz App](https://grapsinho.github.io/Games/Trivia-app/)
+დააწკაპე: [Quiz App](https://grapsinho.github.io/Games/quiz%20app/)
 
 ![image](https://github.com/user-attachments/assets/117ca81d-dddc-4de3-a334-622097d88782)
 
