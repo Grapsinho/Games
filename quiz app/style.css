@@ -1,0 +1,125 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #ffffff;
+}
+#quiz-container {
+  background-color: #1c1f26;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+}
+h1, h4 {
+  margin-bottom: 20px;
+  color: #61dafb;
+  font-size: 2em;
+}
+.difficulty-container {
+  margin-bottom: 30px;
+}
+.difficulty-option {
+  background-color: #3a3f47;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.2em;
+}
+.difficulty-option:hover {
+  background-color: #61dafb;
+  transform: translateY(-5px);
+  color: #1c1f26;
+}
+.quiz-list {
+  display: none;
+}
+.question-container {
+  margin-bottom: 30px;
+}
+.question {
+  font-size: 1.2em;
+  color: #e4e4e4;
+  margin-bottom: 20px;
+}
+.answers {
+  list-style: none;
+  padding: 0;
+}
+.answers li {
+  background-color: #3a3f47;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.1em;
+}
+.answers li:hover {
+  background-color: #61dafb;
+  transform: translateY(-5px);
+  color: #1c1f26;
+}
+#next-button, #tryAgainBtn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#next-button:hover, #tryAgainBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+#result-container {
+  display: none;
+  font-size: 1.5em;
+  color: #61dafb;
+  margin-top: 20px;
+}
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #61dafb;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.difficulty {
+  background-color: #4a4e58;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#scoreboard {
+  background-color: #1c1f26;
+  border: 2px solid #61dafb;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

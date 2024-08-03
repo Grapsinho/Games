@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container" style="margin-inline: 0.5rem;">
+        <h1>Quiz App</h1>
+        <div id="scoreboard">Previous Score: <span id="score">0</span></div>
+
+        <div class="difficulty-container">
+            <h4 style="font-size: 1rem; color: #515a69;">Choose Difficulty:</h4>
+            <div class="difficulty-option" data-difficulty="all">All</div>
+            <div class="difficulty-option" data-difficulty="easy">Easy</div>
+            <div class="difficulty-option" data-difficulty="medium">Medium</div>
+            <div class="difficulty-option" data-difficulty="hard">Hard</div>
+        </div>
+        <div class="loading-spinner" id="loading-spinner"></div>
+        <div class="quiz-list">
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
